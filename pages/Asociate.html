@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Historia - Club Atlético Belgrano</title>
+    <meta name="description" content="Club Atlético Belgrano">
+    <title>¡Asociate y ayuda a Belgrano!</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
             <div class="right-section">
                 <div class="action-links">
                     <div class="border-box">Bienvenido</div>
-                    <div class="border-box">La pasión mas grande de Córdoba</div>
+                    <div class="border-box">La pasión más grande de Córdoba</div>
                 </div>
             </div>
         </div>
@@ -38,49 +39,52 @@
     </header>
 
     <main class="main">
-        <h1>¡Asociate y ayuda a Belgrano!</h1>
-        <p>¿Sabías que más de la mitad de los ingresos que genera el club año a año los debe a los aportes de sus socios? Sumate a la pasión más grande de Córdoba y asociate. Rellena el siguiente formulario para obtener más información.</p>
+        <div class="association-section">
+            <h1>¡Asociate y ayuda a Belgrano!</h1>
+            <p>¿Sabías que más de la mitad de los ingresos que genera el club año a año los debe a los aportes de sus socios? Sumate a la pasión más grande de Córdoba y asociate. Rellena el siguiente formulario para obtener más información.</p>
+            <p>Una vez completados los datos, deberás abonar tu primer cuota para activarlo. Siendo socio ya podrás comprar un abono para los partidos que Belgrano haga de local en el siguiente torneo a precios exclusivos.</p>
+            
+            <form>
+                <label for="nombre">Nombre y Apellido:</label><br>
+                <input type="text" id="nombre" name="nombre"><br>
 
-        <form>
-            <label for="nombre">Nombre y Apellido:</label><br>
-            <input type="text" id="nombre" name="nombre"><br>
+                <label for="documento">Número de Documento:</label><br>
+                <input type="text" id="documento" name="documento"><br>
 
-            <label for="documento">Número de Documento:</label><br>
-            <input type="text" id="documento" name="documento"><br>
+                <label for="sexo">Sexo:</label><br>
+                <select id="sexo" name="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select><br>
 
-            <label for="sexo">Sexo:</label><br>
-            <select id="sexo" name="sexo">
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-                <option value="otro">Otro</option>
-            </select><br>
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
 
-            <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"><br>
+                <label for="direccion">Dirección:</label><br>
+                <input type="text" id="direccion" name="direccion"><br>
 
-            <label for="direccion">Dirección:</label><br>
-            <input type="text" id="direccion" name="direccion"><br>
+                <label for="barrio">Barrio:</label><br>
+                <input type="text" id="barrio" name="barrio"><br>
 
-            <label for="barrio">Barrio:</label><br>
-            <input type="text" id="barrio" name="barrio"><br>
+                <label for="localidad">Localidad:</label><br>
+                <input type="text" id="localidad" name="localidad"><br>
 
-            <label for="localidad">Localidad:</label><br>
-            <input type="text" id="localidad" name="localidad"><br>
+                <label for="nacionalidad">Nacionalidad:</label><br>
+                <input type="text" id="nacionalidad" name="nacionalidad"><br>
 
-            <label for="nacionalidad">Nacionalidad:</label><br>
-            <input type="text" id="nacionalidad" name="nacionalidad"><br>
+                <label for="jubilado">¿Es Jubilado?</label><br>
+                <input type="checkbox" id="jubilado" name="jubilado"><br>
 
-            <label for="jubilado">¿Es Jubilado?</label><br>
-            <input type="checkbox" id="jubilado" name="jubilado"><br>
-
-            <input type="submit" value="Enviar">
-        </form>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
         
-        <img src="../assets/general/socios.png" alt="Socios"
-                width="400px"
-                height="auto"
-                >
+        <div class="images">
+            <img src="../assets/general/asociate.jpg" alt="Asociate">
+        </div>
     </main>
+
     <footer>
         <div class="footer-banner">
             <img src="../assets/general/lpf.png" alt="LPF" width="100px" height="auto">
@@ -105,8 +109,8 @@
         </div>
         <div class="footer-links">
             <div class="links-container">
-                <div>Politicas de Privacidad</div>
-                <div>Terminos de Uso</div>
+                <div>Políticas de Privacidad</div>
+                <div>Términos de Uso</div>
                 <div>Accesibilidad</div>
                 <div>Contacto</div>
             </div>
@@ -114,3 +118,4 @@
     </footer>
 </body>
 </html>
+

@@ -1,11 +1,11 @@
-/* Reset CSS para eliminar márgenes y padding por defecto */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos globales */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #019CDE;
@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 
-/* Estilo del encabezado */
+
 header {
     background-color: #019CDE;
     padding: 20px;
@@ -29,9 +29,9 @@ header {
 }
 
 .header-images img {
-    width: 100%;
-    max-width: 100%;
+    width: 48%;
     height: auto;
+    max-width: 48%;
 }
 
 .banner {
@@ -67,7 +67,9 @@ header {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 20px
+    display flex;
+    justify-content: center;
 }
 
 .search-bar input {
@@ -83,7 +85,7 @@ header {
     cursor: pointer;
 }
 
-/* Estilo del menú de navegación */
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -148,21 +150,61 @@ form input[type="submit"] {
     margin-top: 20px;
 }
 
-.main .image {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .main .image img {
-    width: 100%;
-    max-width: 400px;
-    border: 2px solid #fff;
-    border-radius: 5px;
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
-/* Estilo del pie de página */
-footer {
+.images img {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+@media (max-width: 768px) {
+    .header-images {
+        flex-direction: column;
+    }
+
+    .header-images img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .center-section .escudo {
+        width: 30px;
+    }
+
+    .footer-banner img {
+        width: 60px;
+    }
+
+    .social-icons .social-icon {
+        width: 40px;
+        height: auto;
+        padding: 5px;
+    }
+
+    .footer-links .links-container {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .footer-links .links-container div {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
+    .main .image img {
+        max-width: 100%; 
+    }
+}
+
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,18 +252,21 @@ footer {
 
 .footer-links .links-container {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .footer-links .links-container div {
     padding: 5px 10px;
 }
 
-@media (min-width: 768px) {
-    .footer-links .links-container {
-        flex-direction: row;
-    }
+.player {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
-
+.player img {
+    margin-left: 10px;
+}
