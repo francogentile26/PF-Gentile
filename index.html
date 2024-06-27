@@ -30,14 +30,34 @@
             <button type="submit">Buscar</button>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="./pages/Noticias.html">Noticias</a></li>
-                <li><a href="./pages/Plantel Actual.html">Plantel Actual</a></li>
-                <li><a href="./pages/Nuestra Historia.html">Nuestra Historia</a></li>
-                <li><a href="./pages/Asociate.html">Asociate</a></li>
+            <ul class="main-menu">
+                <li class="dropdown">
+                    <a href="index.html">Inicio ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="./pages/Noticias.html">Noticias</a></li>
+                        <li><a href="./pages/Plantel Actual.html">Plantel Actual</a></li>
+                        <li><a href="./pages/Nuestra Historia.html">Nuestra Historia</a></li>
+                        <li><a href="./pages/Asociate.html">Asociate</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
+        <div class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger-menu');
+                const navMenu = document.querySelector('nav ul');
+        
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('show');
+                });
+            });
+        </script>
+        
  <div class="header-images">
             <img src="assets/general/cabb1.jpg" alt="CAB1" class="header-img">
             <img src="assets/general/cab2.jpg" alt="CAB2" class="header-img">
@@ -46,7 +66,10 @@
             <h1>¡Bienvenidos a la página oficial del Club Atlético Belgrano!</h1>
             <br>
             <p>El Club Atlético Belgrano, histórico equipo de la primera división del fútbol argentino, fue fundado en 1905. En esta, nuestra página web oficial, encontrarás no solo información actual de la institución, sino también sobre nuestra gloriosa historia desde sus inicios</p>
-            <p>En las pestañas que podés ver arriba tendrás diferentes secciones para informarte sobre el pirata cordobés, podrás ver actualidad, el plantel conformado para la temporada 2024 de la liga profesional, parte de nuestra historia y además podrás asociarte para hacer un Belgrano cada vez más grande. ¡Apoyá al club desde adentro para que sigamos creciendo juntos!</p>
+            <br>
+            <p>En cada clic, sumérgete en la rica historia y el presente vibrante del Club Atlético Belgrano. Desde noticias de última hora hasta perfiles detallados de nuestro plantel 2024, y la oportunidad de convertirte en socio y construir un futuro brillante con nosotros. Únete a nuestra comunidad y sé parte de nuestra historia en movimiento</p>
+            <br>
+            <p>Celebra con nosotros más de un siglo de pasión y éxito con el Club Atlético Belgrano. Descubre todo lo que necesitas saber sobre nuestro equipo, desde los días fundacionales hasta la emoción del presente. Bienvenido a la página web oficial, donde cada página cuenta una historia de amor por nuestro club y la ciudad de Córdoba.</p>
         </div>
        <div class="header-images">
             <img src="assets/general/cab3.jpg" alt="CAB3" class="header-img">
