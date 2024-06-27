@@ -9,13 +9,25 @@ body {
   background-color: #019CDE;
   color: #fff;
   margin: 0;
-  overflow-x: hidden;
 }
 
 header {
   background-color: #019CDE;
   padding: 20px;
   width: 100%;
+}
+
+.header-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.header-images img {
+  width: 23%;
+  height: auto;
 }
 
 .banner {
@@ -25,18 +37,23 @@ header {
   gap: 20px;
   text-align: center;
 }
-.banner .left-section, .banner .right-section {
+
+.banner .left-section,
+.banner .right-section {
   text-align: center;
 }
-.banner .left-section h1 {
+
+.left-section h1 {
   margin: 0;
   font-size: 24px;
 }
-.banner .center-section .escudo {
+
+.center-section .escudo {
   width: 50px;
   height: auto;
 }
-.banner .action-links {
+
+.action-links {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,11 +64,15 @@ header {
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  display: flex
+  justify-content center;
 }
+
 .search-bar input {
   padding: 10px;
   width: 200px;
 }
+
 .search-bar button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -68,9 +89,11 @@ nav ul {
   margin: 20px 0;
   gap: 20px;
 }
+
 nav ul li {
   margin: 0;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #fff;
@@ -85,27 +108,11 @@ nav ul li a {
   padding: 20px;
   border-radius: 10px;
   max-width: 100%;
+  overflow-x: hidden;
 }
+
 .main h1, .main p {
   margin: 0 0 10px 0;
-}
-.main .image img, .main .images img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.main .video-container {
-  max-width: 100%;
-  overflow: hidden;
-}
-.main .video-container video {
-  width: 100%;
-  height: auto;
-}
-.main .news-item img {
-  width: 100%;
-  height: auto;
 }
 
 form {
@@ -113,17 +120,23 @@ form {
   flex-direction: column;
   gap: 10px;
 }
+
 form label {
   margin-top: 10px;
 }
-form input[type=text], form input[type=date], form select {
+
+form input[type="text"], 
+form input[type="date"], 
+form select {
   padding: 10px;
   width: 100%;
 }
-form input[type=checkbox] {
+
+form input[type="checkbox"] {
   margin-top: 10px;
 }
-form input[type=submit] {
+
+form input[type="submit"] {
   padding: 10px;
   background-color: #007bff;
   color: #fff;
@@ -132,13 +145,89 @@ form input[type=submit] {
   margin-top: 20px;
 }
 
-.player {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.main .image img {
+  width: 100%; 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
 }
-.player img {
-  margin-left: 10px;
+
+.images img {
+  width: 100%; 
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+@media (max-width: 768px) {
+  .header-images {
+    flex-direction: column;
+  }
+
+  .header-images img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .center-section .escudo {
+    width: 30px;
+  }
+
+  .footer-banner img {
+    width: 60px;
+  }
+
+  .social-icons .social-icon {
+    width: 40px;
+    height: auto;
+    padding: 5px;
+  }
+
+  .footer-links .links-container {
+    gap: 5px;
+    padding: 5px;
+  }
+
+  .footer-links .links-container div {
+    font-size: 12px;
+    padding: 3px 5px;
+  }
+
+  .main .image img {
+    max-width: 100%; 
+  }
+
+  .video-container {
+    width: 100%;
+    padding-bottom: 56.25%; /* Mantener relación de aspecto 16:9 */
+    position: relative;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .video-container video,
+  .news-img {
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .images img {
+    width: 50%;
+    height: auto; 
+  }
 }
 
 .footer {
@@ -149,30 +238,35 @@ form input[type=submit] {
   padding: 20px;
   gap: 20px;
 }
-.footer .footer-banner {
+
+.footer-banner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
 }
-.footer .footer-banner img {
+
+.footer-banner img {
   width: 80px;
   height: auto;
   background-color: #017db8;
   padding: 10px;
   border-radius: 10px;
 }
-.footer .social-icons {
+
+.social-icons {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.footer .social-icons .social-icon {
+
+.social-icons .social-icon {
   width: 40px;
   height: auto;
   padding: 5px;
 }
-.footer .footer-links {
+
+.footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -181,61 +275,27 @@ form input[type=submit] {
   border-radius: 5px;
   gap: 10px;
 }
-.footer .footer-links .links-container {
+
+.footer-links .links-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-.footer .footer-links .links-container div {
+
+.footer-links .links-container div {
   padding: 5px 10px;
 }
 
-@media (max-width: 768px) {
-  .header-images {
-    flex-direction: column;
-  }
-  .header-images img {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  .center-section .escudo {
-    width: 30px;
-  }
-  .footer-banner img {
-    width: 60px;
-  }
-  .social-icons .social-icon {
-    width: 40px;
-    height: auto;
-    padding: 5px;
-  }
-  .footer-links .links-container {
-    gap: 5px;
-    padding: 5px;
-  }
-  .footer-links .links-container div {
-    font-size: 12px;
-    padding: 3px 5px;
-  }
-  .main {
-    margin: 10px;
-    padding: 10px;
-  }
-  .main .image img {
-    max-width: 100%;
-  }
-  .main .video-container {
-    max-width: 100%;
-  }
-  .main .video-container video {
-    width: 100%;
-    height: auto;
-  }
-  .main .news-item img {
-    width: 100%;
-    height: auto;
-  }
+.player {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
+
+.player img {
+  margin-left: 10px;
+}
+
 
 /*# sourceMappingURL=styles.css.map */
